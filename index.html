@@ -518,6 +518,118 @@ const notes=['🎵','🎶','🎼','🎹','🎸'];
 let ni=0;
 function toggleNote(btn){ btn.textContent = notes[++ni % notes.length]; }
 
+
+
 </script>
+
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Letter 💖</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+}
+
+/* 🔒 Login Screen */
+#loginScreen{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  z-index:9999;
+}
+
+#loginScreen input{
+  padding:10px;
+  margin:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+#loginScreen button{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#e91e63;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* 🌸 Main Content Hidden Initially */
+#mainContent{
+  display:none;
+}
+
+/* simple styling for your letter */
+.container{
+  text-align:center;
+  padding:40px;
+}
+
+button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  background:#e91e63;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔐 PASSWORD SCREEN -->
+<div id="loginScreen">
+  <h2>Enter Password 🔒</h2>
+  <input type="password" id="passInput" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock</button>
+  <p id="errorMsg" style="color:red;"></p>
+</div>
+
+<!-- 💖 YOUR MAIN PAGE -->
+<div id="mainContent">
+
+  <div class="container">
+    <h1>💖 ಪ್ರಿಯ ಶ್ವೇತಾ 💖</h1>
+
+    <p>ನಿನ್ನ ಜೊತೆ ಮಾತನಾಡೋದು ನನ್ನ ದಿನದ ಒಂದು ಶಾಂತ ಕ್ಷಣದಂತೆ ಅನಿಸುತ್ತದೆ.</p>
+    <p>ನಿನ್ನ simplicity ಮತ್ತು calmness ನನಗೆ ತುಂಬ ಇಷ್ಟ.</p>
+    <p>ನಿನ್ನ happiness ನನಗೆ ಮುಖ್ಯ ❤️</p>
+
+    <button onclick="alert('💖 Thank you for reading 💖')">Click Me</button>
+  </div>
+
+</div>
+
+<script>
+
+/* 🔐 PASSWORD CHECK */
+function checkPassword(){
+  const correctPassword = "Shweta@360"; // 👉 CHANGE PASSWORD HERE
+  const userInput = document.getElementById("passInput").value;
+
+  if(userInput === correctPassword){
+    document.getElementById("loginScreen").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+  } else {
+    document.getElementById("errorMsg").textContent = "Wrong password ❌";
+  }
+}
+
+</script>
+
+</body>
+</html>
 </body>
 </html>
